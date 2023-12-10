@@ -1,10 +1,12 @@
 import React from "react";
+import Header from "./pages/Header/Header";
+import './App.scss';
 
 const App = () => {
     return (
-        <>
-            <h1> Le App </h1>
-        </>
+        <div id="App">
+            <Header />
+        </div>
     )
 }
 
