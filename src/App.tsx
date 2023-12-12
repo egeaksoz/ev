@@ -4,7 +4,7 @@ import './App.scss';
 
 const App = () => {
     return (
-        <div id="App">
+        <div id="app">
             <Header />
         </div>
     )
