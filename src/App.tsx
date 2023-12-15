@@ -1,13 +1,13 @@
-import React from "react";
-import Header from "./pages/Header/Header";
-import './App.scss';
+import Header from './sharedComponents/Header/Header'
+import './App.scss'
+import type { FC } from 'react'
 
-const App = () => {
-    return (
-        <div id="app">
-            <Header />
-        </div>
-    )
+const App: FC = () => {
+  return (
+    <div id="app">
+      <Header />
+    </div>
+  )
 }
 
-export default App;
+export default App
