@@ -1,10 +1,10 @@
-import './header.scss'
+import './Header.scss'
 import Logo from '../Logo'
 import type { FC } from 'react'
 
 const Header: FC = () => {
   return (
-    <div id="header">
+    <div className='header' role="header">
       <Logo />
         <p className="tag"> Welcome to your house </p>
           <div className="nav">
