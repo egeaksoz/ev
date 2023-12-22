@@ -1,29 +1,20 @@
-import { render, screen } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import Header from './Header'
 
 describe('Header component', () => {
-
-  beforeEach(() => {
-    render(<Header />)
-  })
-
-  it('should render', () => {    
-    expect(screen.getByRole('header')).not.toBeNull()
+  it('should render', () => {
+    const { getByRole } = render(<Header />)
+    expect(getByRole('header')).toBeTruthy()
   })
 
   it('should show the header tag', () => {
-    const tag = screen.getByText('Welcome to your house')
-    expect(tag).not.toBeNull();
+    const { getByText } = render(<Header />)
+    expect(getByText('Welcome to your house')).toBeTruthy()
   })
 
-  it('should have login link', () => {
-    const login = screen.getByText('Login')
-    expect(login).not.toBeNull();
+  it('should show the login and signup links', () => {
+    const { getByText } = render(<Header />)
+    expect(getByText('Login')).toBeTruthy()
+    expect(getByText('Sign Up')).toBeTruthy()
   })
-
-  it('should have sign up link', () => {
-    const signUp = screen.getByText('Sign Up')
-    expect(signUp).not.toBeNull();
-  })
-
 })
