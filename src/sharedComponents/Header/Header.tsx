@@ -4,14 +4,14 @@ import type { FC } from 'react'
 
 const Header: FC = () => {
   return (
-    <div className='header' role="header">
+    <header>
       <Logo />
         <p className="tag"> Welcome to your house </p>
           <div className="nav">
             <a href="/login"> Login </a>
             <a href="/signup"> Sign Up </a>
           </div>
-    </div>
+    </header>
   )
 }
 

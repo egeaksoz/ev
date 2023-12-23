@@ -4,6 +4,6 @@ import Logo from './Logo'
 describe('Logo component', () => {
   it('should render', () => {
     const { getByTestId } = render(<Logo />)
-    expect(getByTestId('logo')).not.toBeNull()
+    expect(getByTestId('logo')).toBeTruthy()
   })
 })

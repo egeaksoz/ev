@@ -1,12 +1,14 @@
-.header {
+header {    
     display: flex;
     align-items: center;
-    border-bottom-width: 1px;
+    border-bottom-width: 0.5px;
     border-bottom-style: solid;
-    background-color:#789dbe
+    border-bottom-color: #AA4A44;
+    height: 60px;
 }
 
 .tag {
+    font-family: system-ui;
     margin-left: auto;
 }
 
@@ -17,9 +19,11 @@
 .nav a {
     padding: 0 20px 0 20px;
     text-decoration: none;
+    color: black;
 }
 
 .nav a:hover {
-    color: black;
-    background-color: #4d6880;
+    color: white;
+    background-color: #AA4A44;
+    border-radius: 10px;
 }

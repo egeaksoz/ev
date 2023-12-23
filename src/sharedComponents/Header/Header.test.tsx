@@ -3,8 +3,8 @@ import Header from './Header'
 
 describe('Header component', () => {
   it('should render', () => {
-    const { getByRole } = render(<Header />)
-    expect(getByRole('header')).toBeTruthy()
+    const { container } = render(<Header />)
+    expect(container.querySelector('header')).toBeTruthy()
   })
 
   it('should show the header tag', () => {

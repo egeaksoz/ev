@@ -9,7 +9,7 @@ interface Props {
 
 export default function Layout ({ children }: Props): JSX.Element {
   return (
-    <div id='abbas'>
+    <div className='layout'>
       <Header />
       <main>{children}</main>
       <Footer />
