@@ -9,11 +9,12 @@ describe('Footer component', () => {
 
   it('should show the copyright text', () => {
     const { getByText } = render(<Footer />)
-    expect(getByText('© 2023 Ege Aksoz - Our house in the middle of our street')).toBeTruthy()
+    expect(getByText('© 2023 Ege Aksoz')).toBeTruthy()
+    expect(getByText('- Our house in the middle of our street')).toBeTruthy()
   })
 
   it('should show the github icon', () => {
     const { container } = render(<Footer />)
-    expect((container.querySelector('img') as HTMLImageElement).src).toContain('github')
+    expect(container.querySelector('img')!.src).toContain('github')
   })
 })

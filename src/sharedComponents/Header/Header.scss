@@ -12,18 +12,24 @@ header {
     margin-left: auto;
 }
 
-.nav {
+nav {
     margin-left: auto;
 }
 
-.nav a {
+nav a {
     padding: 0 20px 0 20px;
     text-decoration: none;
     color: black;
 }
 
-.nav a:hover {
+nav a:hover {
     color: white;
     background-color: #AA4A44;
     border-radius: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .tag {
+      display: none;
+    }
 }
