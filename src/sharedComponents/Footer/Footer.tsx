@@ -1,10 +1,12 @@
 import './Footer.scss'
 import type { FC } from 'react'
 
+const currentYear = new Date().getFullYear();
+
 const Footer: FC = () => {
   return (
     <footer>
-        <p> © 2023 Ege Aksoz <span> - Our house in the middle of our street </span></p>
+        <p> © {currentYear} Ege Aksoz <span> - Our house in the middle of our street </span></p>
         <a href='https://github.com/egeaksoz/ev'><img src='github-mark.png' /></a>
     </footer>
   )
