@@ -1,7 +1,7 @@
 import './Footer.scss'
 import type { FC } from 'react'
 
-const currentYear = new Date().getFullYear();
+const currentYear = new Date().getFullYear()
 
 const Footer: FC = () => {
   return (

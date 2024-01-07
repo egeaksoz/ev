@@ -1,26 +1,35 @@
 import './Header.scss'
 import Logo from '../Logo'
 import { useRef, type FC, useState } from 'react'
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
+import MenuIcon from '@mui/icons-material/Menu'
+import CloseIcon from '@mui/icons-material/Close'
+import { ClickAwayListener } from '@mui/base/ClickAwayListener'
 
 const Header: FC = () => {
   const [menuToggle, setMenu] = useState(false)
   const navRef = useRef<HTMLUListElement>(null)
 
-  const toggleMenu = () => {
+  const toggleMenu: VF = () => {
     navRef.current!.classList.toggle('mobile-nav')
     setMenu(!menuToggle)
   }
 
+  const handleClickAway: VF = () => {
+    if (menuToggle) {
+      navRef.current!.classList.toggle('mobile-nav')
+      setMenu(!menuToggle)
+    }
+  }
+
   return (
+    <ClickAwayListener onClickAway={handleClickAway}>
     <header>
       <Logo />
         <p className='tag'> Welcome to your house </p>
-        <button className='mobile-nav-toggle' onClick={toggleMenu}>
-          {menuToggle ? <CloseIcon/> : <MenuIcon/> }
-          <span className='sr-only'>Menu</span>
-        </button>
+          <button className='mobile-nav-toggle' onClick={toggleMenu}>
+            {menuToggle ? <CloseIcon/> : <MenuIcon/> }
+            <span className='sr-only'>Menu</span>
+          </button>
         <nav>
           <ul className='primary-navigation flex' ref={navRef}>
             <li className='active'><a href='/login'> Login </a></li>
@@ -28,6 +37,7 @@ const Header: FC = () => {
           </ul>
         </nav>
     </header>
+    </ClickAwayListener>
   )
 }
 
