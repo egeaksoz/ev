@@ -9,12 +9,12 @@ const Header: FC = () => {
   const [menuToggle, setMenu] = useState(false)
   const navRef = useRef<HTMLUListElement>(null)
 
-  const toggleMenu: VF = () => {
+  const toggleMenu = (): void => {
     navRef.current!.classList.toggle('mobile-nav')
     setMenu(!menuToggle)
   }
 
-  const handleClickAway: VF = () => {
+  const handleClickAway = (): void => {
     if (menuToggle) {
       navRef.current!.classList.toggle('mobile-nav')
       setMenu(!menuToggle)
