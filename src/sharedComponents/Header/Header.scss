@@ -22,9 +22,16 @@ li {
 }
 
 nav a {
-  padding: 0 20px 0 20px;
+  padding: 0 20px 10px 20px;
   text-decoration: none;
   color: black;
+  background-image: linear-gradient(#AA4A44 0 0);
+  background-position: 0 100%;
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  transition:
+    background-size 0.3s,
+    background-position 0s 0.3s;  
 }
 
 nav .menu {
@@ -32,9 +39,8 @@ nav .menu {
 }
 
 nav a:hover {
-  color: white;
-  background-color: #AA4A44;
-  border-radius: 10px;
+  background-position: 100% 100%;
+  background-size: 100% 2px;  
 }
 
 .mobile-nav-toggle {
@@ -54,7 +60,6 @@ nav a:hover {
     flex-direction: column;
     background: hsl(4 43% 47% / 0.5);
     backdrop-filter: blur(0.1rem);
-    transition: 1s;
     transform: translateX(100%);
   }
 
