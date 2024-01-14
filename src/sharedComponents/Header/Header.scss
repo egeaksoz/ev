@@ -18,11 +18,12 @@ nav {
 }
 
 li {
+  padding: 0 10px 0px 10px;
   list-style-type: none;
 }
 
 nav a {
-  padding: 0 20px 10px 20px;
+  padding-bottom: 3px;
   text-decoration: none;
   color: black;
   background-image: linear-gradient(#AA4A44 0 0);
@@ -40,7 +41,7 @@ nav .menu {
 
 nav a:hover {
   background-position: 100% 100%;
-  background-size: 100% 2px;  
+  background-size: 100% 2px;
 }
 
 .mobile-nav-toggle {
@@ -55,12 +56,13 @@ nav a:hover {
   .primary-navigation {
     margin: auto;
     position: fixed;
+    align-items: center;
     inset: 0 0 0 45%;
     padding-top: 10%;
     flex-direction: column;
     background: hsl(4 43% 47% / 0.5);
     backdrop-filter: blur(0.1rem);
-    transform: translateX(100%);
+    transform: translateX(100%);    
   }
 
   .mobile-nav {

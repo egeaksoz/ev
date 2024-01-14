@@ -9,7 +9,7 @@ describe('Footer component', () => {
 
   it('should show the copyright text', () => {
     const { getByText } = render(<Footer />)
-    expect(getByText('© 2023 Ege Aksoz')).toBeTruthy()
+    expect(getByText('© 2024 Ege Aksoz')).toBeTruthy()
     expect(getByText('- Our house in the middle of our street')).toBeTruthy()
   })
 
