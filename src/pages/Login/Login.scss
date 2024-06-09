@@ -1,0 +1,31 @@
+.login {
+  width: 350px;
+  height: 350px;
+  border: 0.5px solid #AA4A44;
+  border-radius: 1%;
+  margin: auto;
+  margin-top: 100px;
+  padding: 2%;
+  background-color: white;
+  box-shadow: 0 0 3px #AA4A44;
+}
+
+p {
+  padding-bottom: 5%;
+}
+
+.credentials {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  margin-top: 8%;
+  padding: 2%;
+}
+
+@media only screen and (max-width: 600px) {
+  .login {
+    width: 60%;
+  }
+}

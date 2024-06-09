@@ -1,0 +1,15 @@
+.creds {
+    border: 1px solid #AA4A44;
+    padding: 3.5%;
+    margin: 2.5% 0 2.5% 0;
+}
+
+.creds:hover {
+    background-color:beige;
+}
+
+.creds:focus {
+    outline-style: none;
+    border: 2px solid #AA4A44;
+    border-radius: 0;
+}

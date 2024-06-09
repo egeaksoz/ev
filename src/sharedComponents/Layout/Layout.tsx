@@ -11,7 +11,7 @@ export default function Layout ({ children }: Props): JSX.Element {
   return (
     <div className='layout'>
       <Header />
-      <main>{children}</main>
+      {children}
       <Footer />
     </div>
   )
