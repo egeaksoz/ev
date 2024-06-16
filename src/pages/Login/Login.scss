@@ -19,14 +19,13 @@
   flex-direction: column;
 }
 
-.login button {  
+.login button {
   margin-top: 8%;
   padding: 3.5%;
   border-style: none;
   border-radius: 15px;
   background-color: #AA4A44;
   cursor: pointer;
-  transition: all .2s ease-out 0s;
 }
 
 .login button:hover {
@@ -37,5 +36,7 @@
 @media only screen and (max-width: 600px) {
   .login {
     width: 60%;
+    border: none;
+    box-shadow: none;
   }
 }

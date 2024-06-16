@@ -8,7 +8,7 @@ interface InputTextProps {
 const TextInput: FC<InputTextProps> = ( props: InputTextProps ) => {
   return (
     <>
-      <input className="creds" name={props.inputText} placeholder={props.inputText} aria-label={props.inputText}/>
+      <input className="creds" name={props.inputText} placeholder={props.inputText} aria-label={props.inputText} autoComplete={props.inputText}/>
     </>
   )
 };
