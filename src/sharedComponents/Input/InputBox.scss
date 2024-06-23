@@ -1,0 +1,11 @@
+.creds {
+    margin: 2.5% 0 2.5% 0;
+    input {
+        padding: 2.5%;
+    &:focus {
+        outline: none;
+        border: 2px solid #AA4A44;
+        border-radius: 0;
+    }
+    }
+}
