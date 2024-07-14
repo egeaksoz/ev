@@ -12,7 +12,8 @@ const Login: FC = () => {
         <InputBox type='password' />
         <p><a href='/password-reset'>Forget password?</a></p>
         <button> Log in </button>
-      </div>      
+      </div>
+      <div className='join'> New house member? <a href='/signup'> Sign Up </a> </div>
     </div>
   )
 }
