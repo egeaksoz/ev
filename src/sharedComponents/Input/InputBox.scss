@@ -1,11 +1,28 @@
 .creds {
+    position: relative;
     margin: 2.5% 0 2.5% 0;
     input {
-        padding: 2.5%;
+        padding: 3.5%;
     &:focus {
         outline: none;
         border: 2px solid #AA4A44;
         border-radius: 0;
     }
+    }
+    label {
+        position: absolute;
+        left: 11px;
+        top: 11px;
+        color: #777;
+        transition: 300ms all;
+        background-color: white;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+    input:focus + label, input:valid + label {
+        font-size: 12px;
+        transform: translateY(-18px);
+        color: black;
+        z-index: 1;
     }
 }
