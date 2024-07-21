@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import './InputBox.scss'
 
 interface InputTextProps {
@@ -7,10 +7,21 @@ interface InputTextProps {
 
 const InputBox: FC<InputTextProps> = ( {type}: InputTextProps ) => {
   const placeholderText = `${type?.charAt(0).toUpperCase()}${type?.slice(1)}`
+  const [inputType, setInputType] = useState(type)  
+  const [showText, setShowText] = useState("Show")
+
+  const handleToggle = () => {
+    const newType = inputType === "password" ? "text" : "password"
+    setInputType(newType)
+    const newShowText = showText === "Show" ? "Hide" : "Show"
+    setShowText(newShowText)
+  }
+
   return (
     <div className="creds">
-      <input id={type} name={type} aria-label={type} autoComplete={type} type={type == "password" ? "password" : "text"} required/>
+      <input id={type} name={type} aria-label={type} autoComplete={type} type={inputType} required/>
       <label htmlFor={type} aria-hidden="true">{placeholderText}</label>
+      {type === "password" && <span id="show-password" role="button" onClick={handleToggle}>{showText}</span> }
     </div>
   )
 };

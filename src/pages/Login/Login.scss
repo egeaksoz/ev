@@ -8,29 +8,27 @@
   padding: 2%;
   background-color: white;
   box-shadow: 0 0 3px #AA4A44;
-}
-
-.login p {
-  padding-bottom: 5%;
+  p {
+    padding-bottom: 5%;
+  }
+  button {
+    margin-top: 8%;
+    padding: 3.5%;
+    border-style: none;
+    border-radius: 15px;
+    background-color: #AA4A44;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.01);
+      background-color: #8d3935;
+      color: white;
+    }
+  }  
 }
 
 .credentials {
   display: flex;
   flex-direction: column;
-}
-
-.login button {
-  margin-top: 8%;
-  padding: 3.5%;
-  border-style: none;
-  border-radius: 15px;
-  background-color: #AA4A44;
-  cursor: pointer;
-}
-
-.login button:hover {
-  transform: scale(1.01);
-  background-color: #8d3935;
 }
 
 .join {
